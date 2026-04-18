@@ -6,7 +6,8 @@ platforms = ["win-64"]
 version = "0.1.0"
 
 [tasks]
-start = "npm start"
+test = "npm run dev",
+start = "npx serve"
 
 [dependencies]
 nodejs = ">=25.8.2,<25.9"
