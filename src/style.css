@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #0f0f0f;
+    font-family: "Inter", sans-serif;
+    color: #e0e0e0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.off_screen {
+    width: 200px;
+    background: #0f0f0f;
+}
+
+/* ── Board area ── */
+.chessboard {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0f0f0f;
+}
+
+.chessboard canvas {
+    border-radius: 6px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* ── Menu ── */
+.menu {
+    width: 220px;
+    background: #181818;
+    border-left: 1px solid #2a2a2a;
+    padding: 32px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.menu h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+}
+
+.menu-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #666;
+}
+
+.menu select {
+    width: 100%;
+    padding: 9px 12px;
+    background: #222;
+    color: #e0e0e0;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    border: 1px solid #333;
+    border-radius: 6px;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%23666' d='M5 6L0 0h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    transition: border-color 0.15s;
+}
+
+.menu select:focus {
+    outline: none;
+    border-color: #555;
+}
+
+.menu select option {
+    background: #222;
+}
+
+.menu button {
+    width: 100%;
+    padding: 10px 0;
+    background: #ffffff;
+    color: #0f0f0f;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition:
+        background 0.15s,
+        transform 0.1s;
+}
+
+.menu button:hover {
+    background: #e0e0e0;
+}
+
+.menu button:active {
+    transform: scale(0.98);
+}
+
+.menu-footer {
+    margin-top: auto;
+    font-size: 0.72rem;
+    color: #444;
+    line-height: 1.7;
+}

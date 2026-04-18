@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chess</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.11.13/lib/p5.min.js"></script>
+        <script src="https://unpkg.com/chess.js@0.11.0/chess.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="off_screen"></div>
+            <div class="chessboard"></div>
+            <div class="menu">
+                <h2>Chess AI</h2>
+
+                <div class="menu-section">
+                    <label for="difficulty">Difficulty</label>
+                    <select id="difficulty" onchange="setDifficulty()">
+                        <option value="1">Easy</option>
+                        <option value="2">Medium</option>
+                        <option value="3">Hard</option>
+                    </select>
+                </div>
+
+                <div class="menu-section">
+                    <button onclick="newGame()">New Game</button>
+                </div>
+
+                <div class="menu-footer">
+                    ♔ &nbsp; You play White &nbsp; ♔<br />
+                    AI responds as Black
+                </div>
+            </div>
+        </div>
+        <script src="ai.js"></script>
+        <script src="sketch.js"></script>
+    </body>
+</html>
